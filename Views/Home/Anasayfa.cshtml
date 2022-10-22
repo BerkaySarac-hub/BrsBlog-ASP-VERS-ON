@@ -1,0 +1,23 @@
+﻿@model IEnumerable<BrsBlogWeb.Models.BlogPost>
+
+@{
+    ViewData["Title"] = "Anasayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Anasayfa</h1>
+<img class="mainPageBanner" src="~/images/mainPage-banner.jpg" asp-append-version="true" />
+<h2 class="MainPostHeader">BLOG POSTLARI</h2>
+<hr />
+@{
+    foreach (var post in Model)
+    {
+        <div class="post-body">
+            <a  class="PostUrl" href="/PostPage/@post.post_url" >
+                <img class="postImg" src="~/images/@post.post_img" />
+                <h1 class="PostHeader">@post.post_header</h1>
+            </a>
+        </div>
+    }
+}
+

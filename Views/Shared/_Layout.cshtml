@@ -1,0 +1,89 @@
+﻿@addTagHelper *,AuthoringTagHelpers;
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+    <!--END OF GOOGLE FONTS-->
+    <title> BRS YAZILIM - yazılım haberleri, yazılım blog, yazılım dünyasından haber </title>
+    <meta name="title" content="yazılım haberleri, yazılım blog, yazılım dünyasından haber">
+    <meta name="description" content="Brs yazılım dünyanın dört bir yanından yazılım , teknoloji haberleri, Projelerim, exception çözümleri">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="~/blog_sitesi.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <img class="logo" src="~/images/yazılım-meclisiLogo.png" />
+        <h1 class="mark-name">YAZILIM MECLISI</h1>
+        <nav>
+            <ul id="navigation-bar">
+                <li>
+                    <a class="custom-btn btn-16" asp-controller="Home"
+                       asp-action="Anasayfa">A N A  S A Y F A</a>
+                </li>
+                <li>
+                    <a class="custom-btn btn-16" asp-controller="Home"
+                       asp-action="Projeler">P R O J E L E R</a>
+                </li>
+                <li>
+                    <a class="custom-btn btn-16" asp-controller="Home"
+                       asp-action="Postlar">P O S T L A R</a>
+                </li>
+                <li>
+                    <a class="custom-btn btn-16" asp-controller="Home"
+                       asp-action="İletişim">İ L E T İ Ş İ M</a>
+                </li>
+            </ul>
+           
+        </nav>
+        
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="ad-containerLeft"></div>
+            <div class="ad-containerRight"></div>
+            <div class="ad-containerLeftBottom"></div>
+            <div class="ad-containerRightBottom"></div>
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - BRS YAZILIM
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/634fe4cab0d6371309ca5992/1gfo1beis';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

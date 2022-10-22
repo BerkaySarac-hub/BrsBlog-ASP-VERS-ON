@@ -1,0 +1,64 @@
+﻿@model BrsBlogWeb.Models.BlogPost
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>BlogPost</h4>
+<hr />
+<div class="w-100">
+    <div class="w-100">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="post_img" class="control-label"></label>
+                <input asp-for="post_img" class="form-control" />
+                <span asp-validation-for="post_img" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="post_header" class="control-label"></label>
+                <input asp-for="post_header" class="form-control" />
+                <span asp-validation-for="post_header" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="post_description" class="control-label"></label>
+                <textarea id="editor" asp-for="post_description" class="form-control w-100" ></textarea>
+                <span asp-validation-for="post_description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="post_keyword" class="control-label"></label>
+                <input asp-for="post_keyword" class="form-control" />
+                <span asp-validation-for="post_keyword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="post_url" class="control-label"></label>
+                <input asp-for="post_url" class="form-control" />
+                <span asp-validation-for="post_url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script src="~/ckeditor/ckeditor.js"></script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        CKEDITOR.replace('editor', {
+
+                height: 220
+        })
+    </script>
+}

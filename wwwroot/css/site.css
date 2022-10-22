@@ -1,0 +1,420 @@
+﻿
+html {
+    font-size: 12px;
+    font-family: 'Oswald', sans-serif;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+.sideAdminMenu {
+    float: left;
+    background-color: lightseagreen;
+    width:20%;
+    height:100%;
+    padding:1rem;
+    display:block;
+}
+.sideAdminMenu .dropdown{
+   display:block;
+   margin-top:.7rem;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+
+}
+/*CANDY BUTTONS*/
+a {
+    margin: 0;
+}
+
+    a.custom-btn {
+        width: 220px;
+        height: 50px;
+        color: white;
+        border-radius: 7px;
+        padding: 10px 25px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+        background: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 5px 5px 0px rgba(0,0,0,.1);
+        outline: none;
+        margin-left:10px;
+    }
+
+.custom-btn:hover {
+    color: black;
+}
+
+a.btn-16 {
+    background-color:ghostwhite; /* fallback for old browsers */
+    
+    color: black;
+    border: none;
+}
+
+    a.btn-16:before {
+        height: 0%;
+        width: 2px;
+    }
+
+    a.btn-16:hover {
+        box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5), -4px -4px 6px 0 rgba(116, 125, 136, .5), inset -4px -4px 6px 0 rgba(255,255,255,.2), inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+        border-radius: 1px;
+        background-color:deepskyblue;
+    }
+
+a.btn-3 {
+    background: rgb(0,172,238);
+    background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 25%;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    display: block;
+    margin-top: 3%;
+}
+
+    a.btn-3 span {
+        position: relative;
+        display: block;
+        width: fit-content;
+        height: 100%;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    a.btn-3:before,
+    a.btn-3:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        background: rgba(2,126,251,1);
+        transition: all 0.3s ease;
+    }
+
+    a.btn-3:before {
+        height: 0%;
+        width: 2px;
+    }
+
+    a.btn-3:after {
+        width: 0%;
+        height: 2px;
+    }
+
+    a.btn-3:hover {
+        background: transparent;
+        box-shadow: none;
+    }
+
+        a.btn-3:hover:before {
+            height: 100%;
+        }
+
+        a.btn-3:hover:after {
+            width: 100%;
+        }
+
+    a.btn-3 span:hover {
+        color: rgba(2,126,251,1);
+    }
+
+    a.btn-3 span:before,
+    a.btn-3 span:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        background: rgba(2,126,251,1);
+        transition: all 0.3s ease;
+    }
+
+    a.btn-3 span:before {
+        width: 2px;
+        height: 0%;
+    }
+
+    a.btn-3 span:after {
+        width: 0%;
+        height: 2px;
+    }
+
+    a.btn-3 span:hover:before {
+        height: 100%;
+    }
+
+    a.btn-3 span:hover:after {
+        width: 100%;
+    }
+
+/* CANDY BUTTONS END*/
+ul.linkList {
+    list-style-type: none;
+    width: auto;
+}
+
+div.Yaz�l�mTurkLink {
+    width: 100%;
+    height: 100%
+}
+
+img.yazilimTurk�mage {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background: rgb(124,79,233);
+    background: linear-gradient(36deg, rgba(124,79,233,1) 12%, rgba(173,101,207,1) 69%, rgba(162,95,168,1) 100%);
+    width: 100%;
+    padding: 8px;
+    background-color: black;
+    font-family: 'Manrope', sans-serif;
+}
+
+h1.mark-name {
+    font-size: 3.1rem;  
+    color: black;
+    animation: color-change 3s infinite;
+    display: inline-block;
+    font-family: 'Silkscreen', cursive;
+}
+
+@keyframes color-change {
+    0% {
+        color: black;
+        text-decoration:underline;
+    }
+
+    50% {
+        color: white;
+        text-decoration:none;
+    }
+
+    100% {
+        color: lightblue;
+        text-decoration:underline;
+    }
+}
+
+p#slogan {
+    font-size: 1.6rem;
+    color: black;
+}
+
+h2.MainPostHeader {
+    font-size: 2.7rem;
+    text-align: left;
+    margin: 2rem;
+}
+
+div.post-body {
+    display: inline-block;
+    width: 33%;
+    height: 400px;
+    padding: 5px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+p.postDescription {
+    text-align: left;
+    font-size: large;
+    color: black;
+    height: 20%;
+    text-overflow: ellipsis;
+}
+
+h1.PostHeader {
+    text-transform: uppercase;
+    height:30%;
+    color: black;
+    font-size: 27px;
+}
+
+img.postImg {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px #9c5dd8;
+}
+
+a.PostUrl {
+    color: white;
+    text-decoration: none;
+}
+img.ImgInPostPage {
+    width: 80%;
+    height: 500px;
+    border-radius: 9px;
+   
+}
+div.projectsContainer {
+    display: inline-block;
+    width: 33%;
+    height: 33%;
+    padding: 5px;
+}
+img.logo{
+    width:150px;
+    height:150px;
+    display:inline;
+    border-radius:50%;
+}
+p.projectsDescription {
+    text-align: left;
+    font-size: large;
+    color: black;
+}
+
+h2.projectsHeader {
+    text-transform: uppercase;
+    color: black;
+}
+
+a.projectUrl {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    height: 12%;
+    display: inline-block;
+   font-size:28px;
+}
+nav ul{
+    display:inline-block;
+}
+nav img{
+    width:20%;
+    display:inline-block;
+    height:100%;
+    float:right;
+}
+nav h1{
+    display:inline-block;
+}
+    nav ul {
+        list-style-type: none;
+    }
+
+        nav ul li {
+            display: inline;
+        }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.3rem;
+                font-family: 'Manrope', sans-serif;
+                padding: 1rem;
+            }
+
+div.container {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    width: 75%;
+
+    color: black;
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+   
+}
+
+main {
+    width: 100%
+}
+div.ad-containerLeft {
+    float: left;
+    height: 25%;
+    width: 10%;
+    position: absolute;
+    top: 15%;
+    left:0;
+    
+}
+div.ad-containerRight {
+    float: right;
+    height: 25%;
+    width: 10%;
+    position: absolute;
+    top: 15%;
+    right: 0;
+   
+}
+div.ad-containerRightBottom {
+    float: right;
+    height: 25%;
+    width: 10%;
+    position: absolute;
+    top: 41%;
+    right: 0;
+   
+}
+div.ad-containerLeftBottom {
+    float: left;
+    height: 25%;
+    width: 10%;
+    position: absolute;
+    top: 41%;
+    left: 0;
+    
+}
+img.mainPageBanner {
+    width: 80%;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 3px white;
+}
+.adminLogin-form{
+    width:75%;
+    height:auto;
+    margin:auto;
+    padding:1rem;
+}
+    .adminLogin-form * {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        font-size: large;
+        margin: 1rem;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid silver;
+        opacity: 0.7;
+        background-color: cadetblue;
+        text-align:center;
+    }
+    .adminLogin-form input:hover{
+        opacity:1;
+        background-color:cadetblue;
+    }
+    .admin-loginBtn{
+        background-color:black;
+        color:white;
+        font-weight:500;
+        transition:.6s all;
+    }
+    .admin-loginBtn:hover{
+        background-color:white;
+        color:black;
+    }
